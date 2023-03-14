@@ -7,7 +7,12 @@ string = input().lower().split(" ")
 words = pd.DataFrame()
 
 for x in string:
-    words = pd.concat([words, pd.read_csv('data/' + x.lower() + '.csv')])
+    name = x.lower()
+    if name in ['8']:
+        words = pd.concat([words, pd.read_csv('data/' + name + 'base.csv'),
+                           pd.read_csv('data/' + name + 'extra.csv')])
+    else:
+        words = pd.concat([words, pd.read_csv('data/' + name + '.csv')])
 
 words = words.sample(frac=1)
 
