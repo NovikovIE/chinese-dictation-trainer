@@ -1,11 +1,9 @@
-# import data.data as dt
+import data.data as dt
 import pandas as pd
 
-names = ['1', '2', '3', '4', '5', '6', '7a', '7b', '8base', '8extra', '8', '9']
+print('SCRIPT DEPRECATED')
 
-print("possible names:")
-print(names)
-print("task?")
+'''
 string = input().lower().split(" ")
 
 words = pd.DataFrame()
@@ -25,3 +23,4 @@ for x in range(words['0'].size):
     i = input()
     print(words.iloc[x]['1'], words.iloc[x]['2'])
     print("--------------------------------")
+'''
